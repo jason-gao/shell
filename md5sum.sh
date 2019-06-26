@@ -19,13 +19,13 @@ read -p "are you put the check_file in the right position ? (Y/N): " select_yn
 echo ""
 echo ""
 
-if [ "$select_yn" == "Y" ] || [ "$select_yn" == "y" ]; then
+if [[ "$select_yn" == "Y" ]] || [[ "$select_yn" == "y" ]]; then
 
     echo "start generate data.md5 ..."
     find ./ -type f -print0 | xargs -0 md5sum | sort > ../data.md5
     echo "generate md5 value over"
 
-elif [ "$select_yn" == "N" ] || [ "$select_yn" == "n" ]; then
+elif [[ "$select_yn" == "N" ]] || [[ "$select_yn" == "n" ]]; then
     echo "stop generate md5 value !"
 else
     echo "I don't know what your choice is !!!"
