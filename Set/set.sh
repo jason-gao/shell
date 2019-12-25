@@ -21,4 +21,7 @@
 #rm non-existent-file # which will fail
 #echo 2
 
+#set -ex
+#aaa
+#echo 1
 
